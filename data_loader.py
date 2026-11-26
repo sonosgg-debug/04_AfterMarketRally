@@ -225,7 +225,7 @@ def load_market_close_snapshot(target_date: str = None) -> dict:
                 pass
 
         # 3. 원격 GitHub Raw에서 해당 날짜 파일 1:1 다운로드 시도
-        g_url = f"https://raw.githubusercontent.com/sonosgg-debug/streamlit-21-AfterMarketRally/main/snapshots/snapshot_{req_d}_1530.json"
+        g_url = f"https://raw.githubusercontent.com/sonosgg-debug/04_AfterMarketRally/main/snapshots/snapshot_{req_d}_1530.json"
         headers = {"User-Agent": "Mozilla/5.0"}
         try:
             r = requests.get(g_url, headers=headers, timeout=5.0)
@@ -292,7 +292,7 @@ def load_market_close_snapshot(target_date: str = None) -> dict:
             pass
 
     # 3. 원격 GitHub에서 당일 스냅샷 탐색
-    g_url = f"https://raw.githubusercontent.com/sonosgg-debug/streamlit-21-AfterMarketRally/main/snapshots/snapshot_{today_str}_1530.json"
+    g_url = f"https://raw.githubusercontent.com/sonosgg-debug/04_AfterMarketRally/main/snapshots/snapshot_{today_str}_1530.json"
     headers = {"User-Agent": "Mozilla/5.0"}
     try:
         r = requests.get(g_url, headers=headers, timeout=5.0)
